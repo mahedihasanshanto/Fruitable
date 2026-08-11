@@ -1,55 +1,1278 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Website Title -->
-  <title>ফল বাজার </title>
+    <!-- Website Title -->
+    <title>ফল বাজার </title>
 
-  <!-- Favicon / Web Icon -->
-  <link rel="icon" type="image/png" href="icon/icons8-fruits-64.png"/>
+    <!-- Favicon / Web Icon -->
+    <link rel="icon" type="image/png" href="icon/icons8-fruits-64.png" />
 
-  <!-- Google Font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap"
-  rel="stylesheet"
-/>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet" />
 
 
-  <!-- DaisyUI + Tailwind CSS -->
- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI + Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome Web Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-  />
+    <!-- Font Awesome Web Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
 
-  <!-- Custom CSS -->
-   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="./style.css" />
-<!-- Tailwind Custom Config -->
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          tiro: ['Tiro Bangla', 'serif'],
-        },
-      },
-    },
-  };
-</script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        tiro: ['Tiro Bangla', 'serif'],
+                    },
+                },
+            },
+        };
+    </script>
 
 </head>
+
 <body>
-    
+    <!-- TOP BAR  -->
+    <div class="hidden lg:block max-w-[1250px] mx-auto px-3 sm:px-4 pt-2">
+
+        <div class="min-h-[50px]
+          bg-lime-500  
+         rounded-tl-[80px]
+         rounded-bl-[30px]
+         rounded-tr-[30px]
+         rounded-br-[80px]
+           px-6 lg:px-9 py-3 flex items-center justify-between gap-6
+            text-white">
+
+            <!-- LEFT SIDE -->
+            <div class="flex items-center gap-6">
+
+                <!-- ADDRESS -->
+                <div class="flex items-center gap-2">
+
+                    <i class="fa-solid fa-location-dot text-yellow-300"></i>
+
+                    <span class="text-[15px]">
+                        ১২৩ সড়ক, রৌহা বাজার
+                    </span>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="flex items-center gap-2">
+
+                    <i class="fa-solid fa-envelope text-yellow-300"></i>
+
+                    <span class="text-[15px]">
+                        Email@Example.com
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="flex items-center gap-2 text-[15px]">
+
+                <a href="#" class="hover:text-yellow-300 transition duration-300">
+                    গোপীয়তা নীতি
+                </a>
+
+                <span>/</span>
+
+                <a href="#" class="hover:text-yellow-300 transition duration-300">
+                    ব্যবহারের শর্তাবলি
+                </a>
+
+                <span>/</span>
+
+                <a href="#" class="hover:text-yellow-300 transition duration-300">
+                    বিক্রয় ও ফেরত
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!--  NAVBAR-->
+    <nav class="w-full sticky top-0 z-50 bg-white shadow-sm">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- NAVBAR MAIN -->
+            <div class="min-h-[80px] flex items-center justify-between">
+
+                <!-- LOGO -->
+                <a href="#" class="text-4xl sm:text-4xl md:text-5xl
+               font-tiro font-bold
+               text-lime-500
+               whitespace-nowrap">
+                    ফল বাজার
+                </a>
+
+
+                <!-- 
+           DESKTOP MENU-->
+                <div class="hidden lg:flex items-center gap-7 xl:gap-9">
+
+                    <!-- HOME -->
+                    <a href="#" class="text-base xl:text-lg
+                 text-lime-600
+                 
+                 hover:text-lime-700
+                 transition duration-300">
+                        হোম
+                    </a>
+
+
+                    <!-- SHOP -->
+                    <a href="#" class="text-base xl:text-lg
+                 text-gray-600
+                 hover:text-lime-600
+                 transition duration-300">
+                        দোকান
+                    </a>
+
+
+                    <!-- SHOP DETAIL -->
+                    <a href="#" class="text-base xl:text-lg
+                 text-gray-600
+                 hover:text-lime-600
+                 transition duration-300">
+                        পণ্যের বিস্তারিত
+                    </a>
+
+
+                    <!-- 
+             DESKTOP PAGES DROPDOWN -->
+                    <div class="relative">
+
+                        <button id="pagesBtn" type="button" class="flex items-center gap-2
+                   text-base xl:text-lg
+                   text-gray-600
+                   hover:text-lime-600
+                   transition duration-300">
+
+                            পেইজ
+
+                            <i id="pagesArrow" class="fa-solid fa-chevron-down text-xs
+                     transition-transform duration-300"></i>
+
+                        </button>
+
+
+                        <!-- DROPDOWN -->
+                        <div id="pagesDropdown" class="hidden
+                   absolute
+                   top-full
+                   left-0
+                   mt-3
+                   w-52
+                   bg-white
+                   rounded-xl
+                   shadow-xl
+                   border border-gray-100
+                   overflow-hidden
+                   z-50">
+
+                            <a href="#" class="block px-5 py-3
+                     text-gray-700
+                     hover:bg-lime-500
+                     hover:text-white
+                     transition duration-300">
+                                কার্ট
+                            </a>
+
+                            <a href="#" class="block px-5 py-3
+                     text-gray-700
+                     hover:bg-lime-500
+                     hover:text-white
+                     transition duration-300">
+                                চেকআউট
+                            </a>
+
+                            <a href="#" class="block px-5 py-3
+                     text-gray-700
+                     hover:bg-lime-500
+                     hover:text-white
+                     transition duration-300">
+                                গ্রাহকের মতামত
+                            </a>
+
+                            <a href="#" class="block px-5 py-3
+                     text-gray-700
+                     hover:bg-lime-500
+                     hover:text-white
+                     transition duration-300">
+                                ৪০৪ পেইজ
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONTACT -->
+                    <a href="#" class="text-base xl:text-lg
+                 text-gray-600
+                 hover:text-lime-600
+                 transition duration-300">
+                        যোগাযোগ
+                    </a>
+
+                </div>
+
+
+
+                <!-- =====================================================
+           DESKTOP RIGHT ICONS
+      ====================================================== -->
+                <div class="hidden lg:flex items-center gap-5">
+
+                    <!-- SEARCH -->
+                    <button type="button" aria-label="Search" class="w-11 h-11
+                 rounded-full
+                 border-2 border-lime-500
+                 text-lime-600
+                 text-lg
+                 hover:bg-lime-500
+                 hover:text-white
+                 transition duration-300">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+
+                    <!-- CART -->
+                    <button type="button" aria-label="Cart" class="relative
+                 text-lime-600
+                 text-3xl
+                 hover:text-lime-700
+                 transition duration-300">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                        <!-- CART COUNT -->
+                        <span class="absolute
+                   -top-2
+                   -right-3
+                   w-5 h-5
+                   flex items-center justify-center
+                   rounded-full
+                   bg-amber-400
+                   text-black
+                   text-[10px]
+                   font-bold">
+                            3
+                        </span>
+
+                    </button>
+
+
+                    <!-- USER -->
+                    <button type="button" aria-label="User" class="text-lime-600
+                 text-3xl
+                 hover:text-lime-700
+                 transition duration-300">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+
+                </div>
+
+
+
+                <!-- MOBILE MENU BUTTON-->
+                <button id="menuBtn" type="button" aria-label="Open Menu" class="lg:hidden
+               w-12 h-11
+               rounded-xl
+               border border-gray-200
+               text-lime-600
+               text-xl
+               hover:bg-gray-50
+               transition duration-300">
+
+                    <i id="menuIcon" class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!--  MOBILE MENU -->
+            <div id="mobileMenu" class="hidden
+             lg:hidden
+             border-t border-gray-100
+             pb-5">
+
+                <div class="flex flex-col pt-3">
+
+                    <!-- HOME -->
+                    <a href="#" class="px-4 py-3
+                 rounded-lg
+                 text-lg
+                 text-lime-600
+                 hover:bg-gray-50
+                 transition duration-300">
+                        হোম
+                    </a>
+
+
+                    <!-- SHOP -->
+                    <a href="#" class="px-4 py-3
+                 rounded-lg
+                 text-lg
+                 text-gray-600
+                 hover:bg-gray-50
+                 hover:text-lime-600
+                 transition duration-300">
+                        দোকান
+                    </a>
+
+
+                    <!-- SHOP DETAIL -->
+                    <a href="#" class="px-4 py-3
+                 rounded-lg
+                 text-lg
+                 text-gray-600
+                 hover:bg-gray-50
+                 hover:text-lime-600
+                 transition duration-300">
+                        পণ্যের বিস্তারিত
+                    </a>
+
+
+
+                    <!--  MOBILE PAGE -->
+                    <div>
+
+                        <button id="mobilePagesBtn" type="button" class="w-full
+                   flex items-center justify-between
+                   px-4 py-3
+                   rounded-lg
+                   text-lg
+                   text-gray-600
+                   hover:bg-gray-50
+                   transition duration-300">
+
+                            <span>পেইজ</span>
+
+                            <i id="mobilePagesArrow" class="fa-solid fa-chevron-down text-sm
+                     transition-transform duration-300"></i>
+
+                        </button>
+
+
+                        <!-- MOBILE DROPDOWN -->
+                        <div id="mobilePagesDropdown" class="hidden
+                   ml-4
+                   mt-1
+                   border-l-2
+                   border-lime-500">
+
+                            <a href="#" class="block
+                     px-5 py-2.5
+                     text-gray-600
+                      hover:bg-lime-500
+                     hover:text-lime-600
+                     transition duration-300">
+                                কার্ট
+                            </a>
+
+                            <a href="#" class="block
+                     px-5 py-2.5
+                     text-gray-600
+                      hover:bg-lime-500
+                     hover:text-lime-600
+                     transition duration-300">
+                                চেকআউট
+                            </a>
+
+                            <a href="#" class="block
+                     px-5 py-2.5
+                     text-gray-600
+                      hover:bg-lime-500
+                     hover:text-lime-600
+                     transition duration-300">
+                                গ্রাহকের মতামত
+                            </a>
+
+                            <a href="#" class="block
+                     px-5 py-2.5
+                     text-gray-600
+                      hover:bg-lime-500
+                     hover:text-lime-600
+                     transition duration-300">
+                                ৪০৪ পেইজ
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONTACT -->
+                    <a href="#" class="px-4 py-3
+                 rounded-lg
+                 text-lg
+                 text-gray-600
+                 hover:bg-gray-50
+                 hover:text-lime-600
+                 transition duration-300">
+                        যোগাযোগ
+                    </a>
+
+
+
+
+                    <!-- MOBILE ICONS -->
+
+                    <div class="flex items-center
+                 gap-5
+                 mt-3
+                 pt-5
+                 px-4
+                 border-t border-gray-100">
+
+                        <!-- SEARCH -->
+                        <button type="button" aria-label="Search" class="w-11 h-11
+                   rounded-full
+                   border-2 border-lime-500
+                   text-lime-600
+                   text-lg
+                   hover:bg-lime-500
+                   hover:text-white
+                   transition duration-300">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+
+
+                        <!-- CART -->
+                        <button type="button" aria-label="Cart" class="relative
+                   text-lime-600
+                   text-3xl">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                            <span class="absolute
+                     -top-2
+                     -right-3
+                     w-5 h-5
+                     flex items-center justify-center
+                     rounded-full
+                     bg-amber-400
+                     text-black
+                     text-[10px]
+                     font-bold">
+                                ৩
+                            </span>
+
+                        </button>
+
+
+                        <!-- USER -->
+                        <button type="button" aria-label="User" class="text-lime-600 text-3xl">
+                            <i class="fa-solid fa-user"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO SECTION  -->
+    <section class="relative min-h-[670px] overflow-hidden bg-[#fffdf8]" style="
+    background-image:
+      linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
+      url('./cover/A\ Little\ Boy\ happy\ to\ eat\ salad_\ He\ love….jpeg');
+    background-size: cover;
+    background-position: center;
+  ">
+
+        <!-- Background Soft Overlay -->
+        <div class="absolute inset-0 bg-white/20"></div>
+
+
+        <!-- Main Container -->
+        <div class="relative z-10 max-w-[1500px] mx-auto
+           px-5 sm:px-8 lg:px-12
+           min-h-[670px]
+           flex items-center">
+
+            <div class="w-full
+             grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]
+             gap-10 lg:gap-14
+             items-center">
+
+                <!-- ================= LEFT CONTENT ================= -->
+                <div class="pt-10 lg:pt-0">
+
+                    <!-- Small Heading -->
+                    <p class="text-[#ffad18]
+                 text-2xl sm:text-3xl
+                 font-tiro
+                 mb-6">
+                        ১০০% ভালো ফল
+                    </p>
+
+
+                    <!-- Main Heading -->
+                    <h1 class="text-[#73c900]
+                 text-5xl sm:text-5xl md:text-5xl lg:text-[60px]
+                 leading-[1.05]
+                 font-tiro
+                 tracking-tight">
+                        তাজা ফল সরাসরি আপনার ঘরে,
+                        <br>
+                        দেশের সেরা ফল এখন অনলাইনে 
+                    </h1>
+
+
+                    <!-- Search Box -->
+                    <div class="mt-20
+                 w-full max-w-[635px]
+                 h-[95px]
+                 flex items-center
+                 rounded-full
+                 border-[3px]
+                 border-[#ffad18]
+                  
+                 bg-white
+                 overflow-hidden
+                 shadow-sm">
+
+                        <!-- Input -->
+                        <input type="text" placeholder="Search" class="flex-1
+                   min-w-0
+                   h-full
+                   px-10
+                   text-xl
+                   text-gray-600
+                   outline-none
+                   bg-transparent">
+
+
+                        <!-- Submit Button -->
+                      <button
+  class="h-full
+         px-10 sm:px-12
+         rounded-full
+         border-[3px]
+         border-[#ffad18]
+         bg-[#73c900]
+         hover:bg-[#64b500]
+         text-white
+         text-xl
+         font-bold
+         shadow-[0_6px_15px_rgba(115,201,0,0.45)]
+         hover:shadow-[0_8px_20px_rgba(100,181,0,0.65)]
+         hover:-translate-y-1
+         transition-all
+         duration-300
+         whitespace-nowrap"
+>
+  সাবমিট করুন
+</button>
+
+                    </div>
+
+                </div>
+
+
+               <!-- ================= RESPONSIVE SLIDER ================= -->
+<div class="relative w-full">
+
+  <div
+    class="relative
+           w-full
+           max-w-[580px]
+           mx-auto
+           aspect-[1.25/1]
+           overflow-hidden
+           rounded-xl sm:rounded-2xl
+           shadow-sm"
+  >
+
+    <!-- ================= IMAGE ================= -->
+    <img
+      src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&w=1200&q=90"
+      alt="Organic Vegetables"
+      class="absolute inset-0
+             w-full h-full
+             object-cover"
+    >
+
+
+    <!-- ================= OVERLAY ================= -->
+    <div
+      class="absolute inset-0
+             bg-black/5"
+    ></div>
+
+
+    <!-- ================= LEFT ARROW ================= -->
+    <button
+      type="button"
+      aria-label="Previous slide"
+      class="absolute
+             left-2 sm:left-4 md:left-6 lg:left-8
+             top-1/2
+             -translate-y-1/2
+             w-10 h-10
+             sm:w-12 sm:h-12
+             md:w-16 md:h-16
+             lg:w-10 lg:h-10
+             rounded-full
+           
+             hover:bg-[#62b300]
+             border border-white/40
+             flex items-center justify-center
+             text-white
+             shadow-lg
+             hover:scale-105
+             transition-all
+             duration-300"
+    >
+      <span
+        class="text-3xl
+               sm:text-4xl
+               md:text-5xl
+               font-light
+               leading-none
+               -mt-1"
+      >
+        ‹
+      </span>
+    </button>
+
+
+    <!-- ================= CENTER LABEL ================= -->
+    <div
+      class="absolute
+             left-1/2
+             top-1/2
+             -translate-x-1/2
+             -translate-y-1/2
+             bg-[#ffad18]/95
+             px-5 py-3
+             sm:px-7 sm:py-4
+             md:px-9 md:py-5
+             lg:px-10 lg:py-6
+             rounded-xl sm:rounded-2xl
+             whitespace-nowrap
+             shadow-lg"
+    >
+
+      <h2
+        class="text-white
+               text-xl
+               sm:text-2xl
+               md:text-3xl
+               lg:text-4xl
+               font-bold"
+      >
+        শাকসবজি
+      </h2>
+
+    </div>
+
+
+    <!-- ================= RIGHT ARROW ================= -->
+    <button
+      type="button"
+      aria-label="Next slide"
+      class="absolute
+             right-2 sm:right-4 md:right-6 lg:right-8
+             top-1/2
+             -translate-y-1/2
+             w-10 h-10
+             sm:w-12 sm:h-12
+             md:w-16 md:h-16
+             lg:w-10 lg:h-10
+             rounded-full
+            
+             hover:bg-[#62b300]
+             border border-white/40
+             flex items-center justify-center
+             text-white
+             shadow-lg
+             hover:scale-105
+             transition-all
+             duration-300"
+    >
+      <span
+        class="text-3xl
+               sm:text-4xl
+               md:text-5xl
+               font-light
+               leading-none
+               -mt-1"
+      >
+        ›
+      </span>
+    </button>
+
+  </div>
+
+</div>
+            
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- Features Section -->
+<section class="py-10 sm:py-14 lg:py-16">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+      <!-- Card -->
+      <div class="bg-gray-100 rounded-2xl p-6 sm:p-7 text-center
+                  hover:-translate-y-2 hover:shadow-lg
+                  transition-all duration-300">
+
+        <!-- Icon -->
+        <div class="relative mx-auto mb-10
+                    w-32 h-32 sm:w-36 sm:h-36
+                    bg-[#ffb323] rounded-full
+                    flex items-center justify-center
+                    after:content-['']
+                    after:absolute
+                    after:-bottom-6
+                    after:border-l-[25px]
+                    after:border-r-[25px]
+                    after:border-t-[28px]
+                    after:border-l-transparent
+                    after:border-r-transparent
+                    after:border-t-[#ffb323]">
+
+          <i class="fa-solid fa-car-side text-white text-4xl sm:text-5xl"></i>
+
+        </div>
+
+        <h3 class="text-2xl sm:text-3xl text-[#355b70] mb-3">
+          Free Shipping
+        </h3>
+
+        <p class="text-lg sm:text-xl text-gray-500 leading-relaxed">
+          Free on order over <br>
+          $300
+        </p>
+
+      </div>
+
+
+      <!-- Card -->
+      <div class="bg-gray-100 rounded-2xl p-6 sm:p-7 text-center
+                  hover:-translate-y-2 hover:shadow-lg
+                  transition-all duration-300">
+
+        <div class="relative mx-auto mb-10
+                    w-32 h-32 sm:w-36 sm:h-36
+                    bg-[#ffb323] rounded-full
+                    flex items-center justify-center
+                    after:content-['']
+                    after:absolute
+                    after:-bottom-6
+                    after:border-l-[25px]
+                    after:border-r-[25px]
+                    after:border-t-[28px]
+                    after:border-l-transparent
+                    after:border-r-transparent
+                    after:border-t-[#ffb323]">
+
+          <i class="fa-solid fa-user-shield text-white text-4xl sm:text-5xl"></i>
+
+        </div>
+
+        <h3 class="text-2xl sm:text-3xl text-[#355b70] mb-3">
+          Security Payment
+        </h3>
+
+        <p class="text-lg sm:text-xl text-gray-500 leading-relaxed">
+          100% security <br>
+          payment
+        </p>
+
+      </div>
+
+
+      <!-- Card -->
+      <div class="bg-gray-100 rounded-2xl p-6 sm:p-7 text-center
+                  hover:-translate-y-2 hover:shadow-lg
+                  transition-all duration-300">
+
+        <div class="relative mx-auto mb-10
+                    w-32 h-32 sm:w-36 sm:h-36
+                    bg-[#ffb323] rounded-full
+                    flex items-center justify-center
+                    after:content-['']
+                    after:absolute
+                    after:-bottom-6
+                    after:border-l-[25px]
+                    after:border-r-[25px]
+                    after:border-t-[28px]
+                    after:border-l-transparent
+                    after:border-r-transparent
+                    after:border-t-[#ffb323]">
+
+          <i class="fa-solid fa-right-left text-white text-4xl sm:text-5xl"></i>
+
+        </div>
+
+        <h3 class="text-2xl sm:text-3xl text-[#355b70] mb-3">
+          30 Day Return
+        </h3>
+
+        <p class="text-lg sm:text-xl text-gray-500 leading-relaxed">
+          30 day money <br>
+          guarantee
+        </p>
+
+      </div>
+
+
+      <!-- Card -->
+      <div class="bg-gray-100 rounded-2xl p-6 sm:p-7 text-center
+                  hover:-translate-y-2 hover:shadow-lg
+                  transition-all duration-300">
+
+        <div class="relative mx-auto mb-10
+                    w-32 h-32 sm:w-36 sm:h-36
+                    bg-[#ffb323] rounded-full
+                    flex items-center justify-center
+                    after:content-['']
+                    after:absolute
+                    after:-bottom-6
+                    after:border-l-[25px]
+                    after:border-r-[25px]
+                    after:border-t-[28px]
+                    after:border-l-transparent
+                    after:border-r-transparent
+                    after:border-t-[#ffb323]">
+
+          <i class="fa-solid fa-phone text-white text-4xl sm:text-5xl"></i>
+
+        </div>
+
+        <h3 class="text-2xl sm:text-3xl text-[#355b70] mb-3">
+          24/7 Support
+        </h3>
+
+        <p class="text-lg sm:text-xl text-gray-500 leading-relaxed">
+          Support every time <br>
+          fast
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- Products Section -->
+<section class="py-12 sm:py-16">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="flex flex-col lg:flex-row lg:items-center
+                lg:justify-between gap-6 mb-10">
+
+      <h2 class="text-3xl sm:text-4xl text-[#355b70]">
+        Our Organic Products
+      </h2>
+
+
+      <!-- Category Buttons -->
+      <div class="flex flex-wrap justify-center gap-3">
+
+        <button
+          class="px-5 py-2 rounded-full
+                 bg-[#ffb323] text-white text-sm">
+          All Products
+        </button>
+
+        <button
+          class="px-5 py-2 rounded-full
+                 bg-gray-100 text-[#355b70]
+                 hover:bg-[#ffb323] hover:text-white
+                 transition">
+          Vegetables
+        </button>
+
+        <button
+          class="px-5 py-2 rounded-full
+                 bg-gray-100 text-[#355b70]
+                 hover:bg-[#ffb323] hover:text-white
+                 transition">
+          Fruits
+        </button>
+
+        <button
+          class="px-5 py-2 rounded-full
+                 bg-gray-100 text-[#355b70]
+                 hover:bg-[#ffb323] hover:text-white
+                 transition">
+          Bread
+        </button>
+
+        <button
+          class="px-5 py-2 rounded-full
+                 bg-gray-100 text-[#355b70]
+                 hover:bg-[#ffb323] hover:text-white
+                 transition">
+          Meat
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Product Grid -->
+    <div
+      class="grid grid-cols-1
+             sm:grid-cols-2
+             lg:grid-cols-4
+             gap-5
+             justify-items-center"
+    >
+
+      <!-- Product Card -->
+      <div
+        class="w-full max-w-[280px]
+               overflow-hidden
+               rounded-lg
+               border border-[#ffb323]
+               bg-white"
+      >
+
+        <!-- Image -->
+        <div class="relative h-[220px]">
+
+          <img
+            src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=600&q=80"
+            class="w-full h-full object-cover"
+            alt="Grapes"
+          >
+
+          <span
+            class="absolute top-2 left-2
+                   px-3 py-1
+                   rounded-md
+                   bg-[#ffb323]
+                   text-white text-sm"
+          >
+            Fruits
+          </span>
+
+        </div>
+
+
+        <!-- Content -->
+        <div class="p-4 text-center">
+
+          <h3 class="text-xl text-[#355b70] mb-2">
+            Grapes
+          </h3>
+
+          <p class="text-sm text-gray-500 leading-5">
+            Lorem ipsum dolor sit amet
+            consectetur adipisicing elit sed do
+            eiusmod te incididunt
+          </p>
+
+
+          <!-- Price + Button -->
+          <div
+            class="flex items-center
+                   justify-between
+                   gap-2 mt-4"
+          >
+
+            <span class="text-[#355b70]">
+              $4.99 / kg
+            </span>
+
+            <button
+              class="flex items-center gap-2
+                     px-3 py-1.5
+                     rounded-full
+                     border border-[#ffb323]
+                     text-[#73c900]
+                     text-sm
+                     hover:bg-[#ffb323]
+                     hover:text-white
+                     transition"
+            >
+              <i class="fa-solid fa-bag-shopping"></i>
+              Add to cart
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Product Card -->
+      <div
+        class="w-full max-w-[280px]
+               overflow-hidden
+               rounded-lg
+               border border-[#ffb323]
+               bg-white"
+      >
+
+        <div class="relative h-[220px]">
+
+          <img
+            src="https://images.unsplash.com/photo-1577069861033-55d04cec4ef5?auto=format&fit=crop&w=600&q=80"
+            class="w-full h-full object-cover"
+            alt="Raspberries"
+          >
+
+          <span
+            class="absolute top-2 left-2
+                   px-3 py-1
+                   rounded-md
+                   bg-[#ffb323]
+                   text-white text-sm"
+          >
+            Fruits
+          </span>
+
+        </div>
+
+
+        <div class="p-4 text-center">
+
+          <h3 class="text-xl text-[#355b70] mb-2">
+            Raspberries
+          </h3>
+
+          <p class="text-sm text-gray-500 leading-5">
+            Lorem ipsum dolor sit amet
+            consectetur adipisicing elit sed do
+            eiusmod te incididunt
+          </p>
+
+
+          <div
+            class="flex items-center
+                   justify-between
+                   gap-2 mt-4"
+          >
+
+            <span class="text-[#355b70]">
+              $4.99 / kg
+            </span>
+
+            <button
+              class="flex items-center gap-2
+                     px-3 py-1.5
+                     rounded-full
+                     border border-[#ffb323]
+                     text-[#73c900]
+                     text-sm
+                     hover:bg-[#ffb323]
+                     hover:text-white
+                     transition"
+            >
+              <i class="fa-solid fa-bag-shopping"></i>
+              Add to cart
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Product Card -->
+      <div
+        class="w-full max-w-[280px]
+               overflow-hidden
+               rounded-lg
+               border border-[#ffb323]
+               bg-white"
+      >
+
+        <div class="relative h-[220px]">
+
+          <img
+            src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=600&q=80"
+            class="w-full h-full object-cover"
+            alt="Apricots"
+          >
+
+          <span
+            class="absolute top-2 left-2
+                   px-3 py-1
+                   rounded-md
+                   bg-[#ffb323]
+                   text-white text-sm"
+          >
+            Fruits
+          </span>
+
+        </div>
+
+
+        <div class="p-4 text-center">
+
+          <h3 class="text-xl text-[#355b70] mb-2">
+            Apricots
+          </h3>
+
+          <p class="text-sm text-gray-500 leading-5">
+            Lorem ipsum dolor sit amet
+            consectetur adipisicing elit sed do
+            eiusmod te incididunt
+          </p>
+
+
+          <div
+            class="flex items-center
+                   justify-between
+                   gap-2 mt-4"
+          >
+
+            <span class="text-[#355b70]">
+              $4.99 / kg
+            </span>
+
+            <button
+              class="flex items-center gap-2
+                     px-3 py-1.5
+                     rounded-full
+                     border border-[#ffb323]
+                     text-[#73c900]
+                     text-sm
+                     hover:bg-[#ffb323]
+                     hover:text-white
+                     transition"
+            >
+              <i class="fa-solid fa-bag-shopping"></i>
+              Add to cart
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Product Card -->
+      <div
+        class="w-full max-w-[280px]
+               overflow-hidden
+               rounded-lg
+               border border-[#ffb323]
+               bg-white"
+      >
+
+        <div class="relative h-[220px]">
+
+          <img
+            src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&w=600&q=80"
+            class="w-full h-full object-cover"
+            alt="Vegetables"
+          >
+
+          <span
+            class="absolute top-2 left-2
+                   px-3 py-1
+                   rounded-md
+                   bg-[#ffb323]
+                   text-white text-sm"
+          >
+            Vegetables
+          </span>
+
+        </div>
+
+
+        <div class="p-4 text-center">
+
+          <h3 class="text-xl text-[#355b70] mb-2">
+            Fresh Vegetables
+          </h3>
+
+          <p class="text-sm text-gray-500 leading-5">
+            Lorem ipsum dolor sit amet
+            consectetur adipisicing elit sed do
+            eiusmod te incididunt
+          </p>
+
+
+          <div
+            class="flex items-center
+                   justify-between
+                   gap-2 mt-4"
+          >
+
+            <span class="text-[#355b70]">
+              $4.99 / kg
+            </span>
+
+            <button
+              class="flex items-center gap-2
+                     px-3 py-1.5
+                     rounded-full
+                     border border-[#ffb323]
+                     text-[#73c900]
+                     text-sm
+                     hover:bg-[#ffb323]
+                     hover:text-white
+                     transition"
+            >
+              <i class="fa-solid fa-bag-shopping"></i>
+              Add to cart
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 
@@ -58,6 +1281,105 @@
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--JAVASCRIPT = -->
+    <script>
+        // Mobile Menu
+        menuBtn.onclick = () => {
+            mobileMenu.classList.toggle("hidden");
+            menuIcon.classList.toggle("fa-bars");
+            menuIcon.classList.toggle("fa-xmark");
+        };
+
+        // Pages Dropdown
+        pagesBtn.onclick = () => {
+            pagesDropdown.classList.toggle("hidden");
+            pagesArrow.classList.toggle("rotate-180");
+        };
+
+        // Mobile Pages
+        mobilePagesBtn.onclick = () => {
+            mobilePagesDropdown.classList.toggle("hidden");
+            mobilePagesArrow.classList.toggle("rotate-180");
+        };
+    </script>
+
+
+
 </body>
+
 </html>
