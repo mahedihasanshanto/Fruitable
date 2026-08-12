@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Website Title -->
+  <title>ফল বাজার </title>
+
+  <!-- Favicon / Web Icon -->
+  <link rel="icon" type="image/png" href="icon/icons8-fruits-64.png" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet" />
+
+
+  <!-- DaisyUI + Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome Web Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="./style.css" />
+  <!-- Tailwind Custom Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            tiro: ['Tiro Bangla', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+</head>
+
+<body>
+
+
+  <!-- TOP BAR  -->
+  <div class="hidden lg:block max-w-[1250px] mx-auto px-3 sm:px-4 pt-2">
+
+    <div class="min-h-[50px]
+          bg-lime-500  
+         rounded-tl-[80px]
+         rounded-bl-[30px]
+         rounded-tr-[30px]
+         rounded-br-[80px]
+           px-6 lg:px-9 py-3 flex items-center justify-between gap-6
+            text-white">
+
+      <!-- LEFT SIDE -->
+      <div class="flex items-center gap-6">
+
+        <!-- ADDRESS -->
+        <div class="flex items-center gap-2">
+
+          <i class="fa-solid fa-location-dot text-yellow-300"></i>
+
+          <span class="text-[15px]">
+            ১২৩ সড়ক, রৌহা বাজার
+          </span>
+
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="flex items-center gap-2">
+
+          <i class="fa-solid fa-envelope text-yellow-300"></i>
+
+          <span class="text-[15px]">
+            Email@Example.com
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT SIDE -->
+      <div class="flex items-center gap-2 text-[15px]">
+
+        <a href="#" class="hover:text-yellow-300 transition duration-300">
+          গোপীয়তা নীতি
+        </a>
+
+        <span>/</span>
+
+        <a href="#" class="hover:text-yellow-300 transition duration-300">
+          ব্যবহারের শর্তাবলি
+        </a>
+
+        <span>/</span>
+
+        <a href="#" class="hover:text-yellow-300 transition duration-300">
+          বিক্রয় ও ফেরত
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!--  NAVBAR-->
+  <nav class="w-full sticky top-0 z-50 bg-white shadow-sm">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- NAVBAR MAIN -->
+      <div class="min-h-[80px] flex items-center justify-between">
+
+        <!-- LOGO -->
+        <a href="#" class="text-4xl sm:text-4xl md:text-5xl
+               font-tiro font-bold
+               text-lime-500
+               whitespace-nowrap">
+          ফল বাজার
+        </a>
+
+
+        <!-- 
+           DESKTOP MENU-->
+        <div class="hidden lg:flex items-center gap-7 xl:gap-9">
+
+          <!-- HOME -->
+          <a href="#home" class="text-base xl:text-lg
+                 text-lime-600
+                 
+                 hover:text-lime-700
+                 transition duration-300">
+            হোম
+          </a>
+
+
+          <!-- SHOP -->
+          <a href="#" class="text-base xl:text-lg
+                 text-gray-600
+                 hover:text-lime-600
+                 transition duration-300">
+            দোকান
+          </a>
+
+
+          <!-- SHOP DETAIL -->
+          <a href="#" class="text-base xl:text-lg
+                 text-gray-600
+                 hover:text-lime-600
+                 transition duration-300">
+            পণ্যের বিস্তারিত
+          </a>
+
+
+          <!-- 
+             DESKTOP PAGES DROPDOWN -->
+          <div class="relative">
+
+            <button id="pagesBtn" type="button" class="flex items-center gap-2
+                   text-base xl:text-lg
+                   text-gray-600
+                   hover:text-lime-600
+                   transition duration-300">
+
+              পেইজ
+
+              <i id="pagesArrow" class="fa-solid fa-chevron-down text-xs
+                     transition-transform duration-300"></i>
+
+            </button>
+
+
+            <!-- DROPDOWN -->
+            <div id="pagesDropdown" class="hidden
+                   absolute
+                   top-full
+                   left-0
+                   mt-3
+                   w-52
+                   bg-white
+                   rounded-xl
+                   shadow-xl
+                   border border-gray-100
+                   overflow-hidden
+                   z-50">
+
+              <a href="#" class="block px-5 py-3
+                     text-gray-700
+                     hover:bg-lime-500
+                     hover:text-white
+                     transition duration-300">
+                কার্ট
+              </a>
+
+              <a href="#" class="block px-5 py-3
+                     text-gray-700
+                     hover:bg-lime-500
+                     hover:text-white
+                     transition duration-300">
+                চেকআউট
+              </a>
+
+              <a href="#" class="block px-5 py-3
+                     text-gray-700
+                     hover:bg-lime-500
+                     hover:text-white
+                     transition duration-300">
+                গ্রাহকের মতামত
+              </a>
+
+              <a href="#" class="block px-5 py-3
+                     text-gray-700
+                     hover:bg-lime-500
+                     hover:text-white
+                     transition duration-300">
+                ৪০৪ পেইজ
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- CONTACT -->
+          <a href="#" class="text-base xl:text-lg
+                 text-gray-600
+                 hover:text-lime-600
+                 transition duration-300">
+            যোগাযোগ
+          </a>
+
+        </div>
+
+
+
+        <!-- =====================================================
+           DESKTOP RIGHT ICONS
+      ====================================================== -->
+        <div class="hidden lg:flex items-center gap-5">
+
+          <!-- SEARCH -->
+          <button type="button" aria-label="Search" class="w-11 h-11
+                 rounded-full
+                 border-2 border-lime-500
+                 text-lime-600
+                 text-lg
+                 hover:bg-lime-500
+                 hover:text-white
+                 transition duration-300">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+
+          <!-- CART -->
+          <button type="button" aria-label="Cart" class="relative
+                 text-lime-600
+                 text-3xl
+                 hover:text-lime-700
+                 transition duration-300">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <!-- CART COUNT -->
+            <span class="absolute
+                   -top-2
+                   -right-3
+                   w-5 h-5
+                   flex items-center justify-center
+                   rounded-full
+                   bg-amber-400
+                   text-black
+                   text-[10px]
+                   font-bold">
+              3
+            </span>
+
+          </button>
+
+
+          <!-- USER -->
+          <button type="button" aria-label="User" class="text-lime-600
+                 text-3xl
+                 hover:text-lime-700
+                 transition duration-300">
+            <i class="fa-solid fa-user"></i>
+          </button>
+
+        </div>
+
+
+
+        <!-- MOBILE MENU BUTTON-->
+        <button id="menuBtn" type="button" aria-label="Open Menu" class="lg:hidden
+               w-12 h-11
+               rounded-xl
+               border border-gray-200
+               text-lime-600
+               text-xl
+               hover:bg-gray-50
+               transition duration-300">
+
+          <i id="menuIcon" class="fa-solid fa-bars"></i>
+
+        </button>
+
+      </div>
+
+
+
+      <!--  MOBILE MENU -->
+      <div id="mobileMenu" class="hidden
+             lg:hidden
+             border-t border-gray-100
+             pb-5">
+
+        <div class="flex flex-col pt-3">
+
+          <!-- HOME -->
+          <a href="home" class="px-4 py-3
+                 rounded-lg
+                 text-lg
+                 text-lime-600
+                 hover:bg-gray-50
+                 transition duration-300">
+            হোম
+          </a>
+
+
+          <!-- SHOP -->
+          <a href="#" class="px-4 py-3
+                 rounded-lg
+                 text-lg
+                 text-gray-600
+                 hover:bg-gray-50
+                 hover:text-lime-600
+                 transition duration-300">
+            দোকান
+          </a>
+
+
+          <!-- SHOP DETAIL -->
+          <a href="#" class="px-4 py-3
+                 rounded-lg
+                 text-lg
+                 text-gray-600
+                 hover:bg-gray-50
+                 hover:text-lime-600
+                 transition duration-300">
+            পণ্যের বিস্তারিত
+          </a>
+
+
+
+          <!--  MOBILE PAGE -->
+          <div>
+
+            <button id="mobilePagesBtn" type="button" class="w-full
+                   flex items-center justify-between
+                   px-4 py-3
+                   rounded-lg
+                   text-lg
+                   text-gray-600
+                   hover:bg-gray-50
+                   transition duration-300">
+
+              <span>পেইজ</span>
+
+              <i id="mobilePagesArrow" class="fa-solid fa-chevron-down text-sm
+                     transition-transform duration-300"></i>
+
+            </button>
+
+
+            <!-- MOBILE DROPDOWN -->
+            <div id="mobilePagesDropdown" class="hidden
+                   ml-4
+                   mt-1
+                   border-l-2
+                   border-lime-500">
+
+              <a href="#" class="block
+                     px-5 py-2.5
+                     text-gray-600
+                      hover:bg-lime-500
+                     hover:text-lime-600
+                     transition duration-300">
+                কার্ট
+              </a>
+
+              <a href="#" class="block
+                     px-5 py-2.5
+                     text-gray-600
+                      hover:bg-lime-500
+                     hover:text-lime-600
+                     transition duration-300">
+                চেকআউট
+              </a>
+
+              <a href="#" class="block
+                     px-5 py-2.5
+                     text-gray-600
+                      hover:bg-lime-500
+                     hover:text-lime-600
+                     transition duration-300">
+                গ্রাহকের মতামত
+              </a>
+
+              <a href="#" class="block
+                     px-5 py-2.5
+                     text-gray-600
+                      hover:bg-lime-500
+                     hover:text-lime-600
+                     transition duration-300">
+                ৪০৪ পেইজ
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- CONTACT -->
+          <a href="#" class="px-4 py-3
+                 rounded-lg
+                 text-lg
+                 text-gray-600
+                 hover:bg-gray-50
+                 hover:text-lime-600
+                 transition duration-300">
+            যোগাযোগ
+          </a>
+
+
+
+
+          <!-- MOBILE ICONS -->
+
+          <div class="flex items-center
+                 gap-5
+                 mt-3
+                 pt-5
+                 px-4
+                 border-t border-gray-100">
+
+            <!-- SEARCH -->
+            <button type="button" aria-label="Search" class="w-11 h-11
+                   rounded-full
+                   border-2 border-lime-500
+                   text-lime-600
+                   text-lg
+                   hover:bg-lime-500
+                   hover:text-white
+                   transition duration-300">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+
+            <!-- CART -->
+            <button type="button" aria-label="Cart" class="relative
+                   text-lime-600
+                   text-3xl">
+
+              <i class="fa-solid fa-bag-shopping"></i>
+
+              <span class="absolute
+                     -top-2
+                     -right-3
+                     w-5 h-5
+                     flex items-center justify-center
+                     rounded-full
+                     bg-amber-400
+                     text-black
+                     text-[10px]
+                     font-bold">
+                ৩
+              </span>
+
+            </button>
+
+
+            <!-- USER -->
+            <button type="button" aria-label="User" class="text-lime-600 text-3xl">
+              <i class="fa-solid fa-user"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </nav>
+  
+  <section class="relative h-[280px] sm:h-[300px] md:h-[320px]
+         bg-cover bg-center
+         flex items-center justify-center" style="background-image: url('');">
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/35"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center">
+
+      <!-- Title -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl
+             font-bold  text-red-500">
+        ৪০৪ ক্রটি
+      </h1>
+
+      <!-- Breadcrumb -->
+      <div class="flex items-center justify-center
+             gap-3 mt-5
+             text-lg sm:text-xl">
+
+        <a href="index.html" class="text-[#80cc00]
+               hover:text-white
+               transition">
+          হোম
+        </a>
+
+        <span class="text-white">
+          /
+        </span>
+
+        <span class="text-[#80cc00]">
+          পেইজ
+        </span>
+
+        <span class="text-white">
+          /
+        </span>
+
+        <span class="text-white">
+          কার্ট
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 404 PAGE ================= -->
+  <section class="min-h-screen
+         flex items-center justify-center
+         bg-white
+         px-4">
+
+    <div class="text-center max-w-3xl mx-auto">
+
+      <!-- Warning Icon -->
+      <div class="flex justify-center mb-5">
+
+        <div class="w-20 h-20
+               flex items-center justify-center
+               text-[#ffb323]">
+
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+            stroke="currentColor" class="w-20 h-20">
+
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0 3.75h.007M10.34 3.94
+               2.12 18a1.875 1.875 0 0 0 1.62 2.812h16.52
+               A1.875 1.875 0 0 0 21.88 18L13.66 3.94
+               a1.875 1.875 0 0 0-3.32 0Z" />
+
+          </svg>
+
+        </div>
+
+      </div>
+
+
+      <!-- 404 -->
+      <h1 class="text-7xl sm:text-8xl md:text-9xl
+             font-bold
+             text-[#455b5d]
+             leading-none">
+
+        404
+
+      </h1>
+
+
+      <!-- Title -->
+      <h2 class="text-4xl sm:text-5xl
+             font-medium
+             text-[#455b5d]
+             mt-3">
+
+        পেজ খুঁজে পাওয়া যায়নি
+
+      </h2>
+
+
+      <!-- Description -->
+      <p class="text-base sm:text-lg
+             text-gray-500
+             leading-7
+             max-w-3xl
+             mx-auto
+             mt-8">
+
+        দুঃখিত, আপনি যে পেজটি খুঁজছেন সেটি
+        আমাদের ওয়েবসাইটে পাওয়া যায়নি!
+        হয়তো হোম পেজে ফিরে যান অথবা
+        আবার সার্চ করে দেখুন।
+
+      </p>
+
+
+      <!-- Back Home Button -->
+      <a href="index.html" class="inline-flex
+             items-center justify-center
+             min-w-[280px]
+             mt-8
+             px-8 py-4
+             rounded-full
+             border border-[#ffb323]
+             text-[#355b70]
+             text-lg
+             hover:bg-[#ffb323]
+             hover:text-white
+             transition duration-300">
+
+        হোম পেজে ফিরে যান
+
+      </a>
+
+    </div>
+
+  </section>
+
+<!--JAVASCRIPT = -->
+  <script>
+    // Mobile Menu
+    menuBtn.onclick = () => {
+      mobileMenu.classList.toggle("hidden");
+      menuIcon.classList.toggle("fa-bars");
+      menuIcon.classList.toggle("fa-xmark");
+    };
+
+    // Pages Dropdown
+    pagesBtn.onclick = () => {
+      pagesDropdown.classList.toggle("hidden");
+      pagesArrow.classList.toggle("rotate-180");
+    };
+
+    // Mobile Pages
+    mobilePagesBtn.onclick = () => {
+      mobilePagesDropdown.classList.toggle("hidden");
+      mobilePagesArrow.classList.toggle("rotate-180");
+    };
+  </script>
+
+</body>
+
+</html>
